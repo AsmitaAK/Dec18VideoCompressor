@@ -16,7 +16,8 @@ import org.json.JSONException;
 //import org.json.JSONObject;
 import com.netcompss.ffmpeg4android_client.BaseWizard;
 import com.netcompss.ffmpeg4android_client.Prefs;
-
+import android.content.Context;
+import android.content.Intent;
 
 public class VideoCompressor extends CordovaPlugin  {
 	

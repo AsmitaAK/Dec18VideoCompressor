@@ -31,7 +31,7 @@
 		</config-file>
 
 		<source-file src="src/android/com/video/compressor/VideoCompressor.java" target-dir="src/com/video/compressor"/>
-		 
+		 <source-file src="src/android/com/video/compressor/DemoClient.java" target-dir="src/com/video/compressor"/>
 		 <config-file target="AndroidManifest.xml" parent="/manifest">
 				
 				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
