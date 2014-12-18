@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			id="com.video.compressor"
+			version="0.0.5">
+
+	  <name>VideoCompressor</name>
+
+	  <description>
+		VideoCompressorrApp Plugin 
+	  </description>
+
+	  <license>Sanda</license>
+
+	  <engines>
+		<engine name="cordova" version=">=3.0.0"/>
+	  </engines>
+
+	  <js-module src="www/VideoCompressor.js" name="VideoCompressor">
+		<clobbers target="window.plugins.VideoCompressor" />
+	  </js-module>
+
+	 
+	  <!-- android -->
+	  <platform name="android">
+
+		<config-file target="res/xml/config.xml" parent="/*">
+		  <feature name="VideoCompressor">
+			<param name="android-package" value="com.video.compressor.VideoCompressor" />
+		  </feature>
+		</config-file>
+
+		<source-file src="src/android/com/video/compressor/VideoCompressor.java" target-dir="src/com/video/compressor"/>
+		 
+		 <config-file target="AndroidManifest.xml" parent="/manifest">
+				
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+				<uses-permission android:name="android.permission.WAKE_LOCK" /> 
+				 <activity android:name="com.examples.ffmpeg4android_demo.DemoClient" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            	  android:windowSoftInputMode="stateHidden"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+               
+             </intent-filter>
+        </activity>
+        
+        <activity android:name="com.netcompss.ffmpeg4android_client.ShowFileAct">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+             </intent-filter>
+        </activity>
+			</config-file>
+	
+			
+
+	  <source-file src="libs/ffmpeg4android_os.jar" target-dir="libs" framework="true"/>
+		  <source-file src="libs/android-support-v4.jar" target-dir="libs" framework="true"/>
+	
+
+	  </platform>
+
+	</plugin>
