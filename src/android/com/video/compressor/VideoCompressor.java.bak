@@ -24,7 +24,7 @@ public class VideoCompressor extends CordovaPlugin  {
 
   private static final String ACTION_SHOW_EVENT = "start";
   private BaseWizard baseWizard;
-private int COMPRESSION_ACTIVITY = 1;
+
 
 
   @Override
